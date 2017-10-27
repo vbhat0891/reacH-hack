@@ -21,6 +21,11 @@ def illness_list(request):
     return render(request, 'chroniFic/illness_list.html',
                   {'chroniFic': illness_list})
 
+
 def about_us(request):
     return render(request, 'chroniFic/about_us.html',
                   {'chroniFic': about_us})
+
+def hospital_list(request):
+    return render(request, 'chroniFic/hospital_list.html',
+                  {'chroniFic': hospital_list})
