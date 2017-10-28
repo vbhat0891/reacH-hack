@@ -76,35 +76,12 @@
         </div>
     </div>
 </nav>
-<div class="content container">
-    <div class="row">
-        <div class="col-md-8">
-            {% block content %}
-                <div class="links">
-                    <!-- Example row of columns -->
-                    <div class="row">
-                        <div class="col-md-3">
-                            <div class="thumbnail">
-                                <div class="caption">
-                                    <h2>Welcome to ChroniFic</h2>
-                                    <div class="dropdown">
-                                          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            Dropdown button
-                                          </button>
-                                          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                            <a class="dropdown-item" href="{% url 'chroniFic:hospital_list' %}">Hospital List</a>
-                                            <a class="dropdown-item" href="{% url 'chroniFic:department_list' %}">Department List</a>
-                                          </div>
-                                        </div>
 
-                            </div>
-                        </div>
+<div class="col-md-6 col-md-offset-1">
+    {% block content %}
 
-                    </div>
-                </div>
-            {% endblock %}
-        </div>
-    </div>
+    {% endblock %}
 </div>
+
 </body>
 </html>

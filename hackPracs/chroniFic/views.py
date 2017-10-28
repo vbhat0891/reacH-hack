@@ -26,6 +26,12 @@ def about_us(request):
     return render(request, 'chroniFic/about_us.html',
                   {'chroniFic': about_us})
 
+
 def hospital_list(request):
     return render(request, 'chroniFic/hospital_list.html',
                   {'chroniFic': hospital_list})
+
+
+def book_appointment(request):
+    return render(request, 'chroniFic/book_appointment.html',
+                  {'chroniFic': book_appointment})

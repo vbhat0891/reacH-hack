@@ -1,18 +1,40 @@
 {% extends 'chroniFic/base.html' %}
 {% load staticfiles %}
-{% block content %
-
+{% block content %}
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+<meta charset="UTF-8">
+<title>Chronfic</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <img src="cinqueterre.jpg" class="img-responsive" alt="Cinque Terre" width="100%" height="100%">
 </head>
 <body>
-<p>Welcome to ChroniFic</p>
-<p><a class="btn btn-primary" href="{% url 'chroniFic:customer' %}"
-                                                  role="button">Click
-                                                Here &raquo;</a></p>
-
+<div class="container">
+<div class="row">
+    <div class="col-md-10 col-md-offset-1">
+        <div class="panel panel-primary">
+            <div class="panel-heading">Welcome!</div>
+                <div class="panel-body">
+                    Welcome to ChroniFic
+                </div>
+            </div>
+    </div>
+</div>
+</div>
+<div class="row">
+</div>
+<p><br><br></p>
+<br>
+<br>
+<br>
+<div class="card" style="width: 20rem;">
+    <img url="chroniFic/diab_spec" style="width: 400px" src="{% static "images/diabetes.jpg" %}"  alt="customer"/>
+<div class="card-body" style="padding-left:100px;padding-top: 30px">
+<!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
+    <a href="#" class="btn btn-primary">Click here for more details</a>
+</div>
+</div>
+{% endblock %}
 </body>
 </html>

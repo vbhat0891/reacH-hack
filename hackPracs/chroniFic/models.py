@@ -73,3 +73,20 @@ class FAQ(models.Model):
     answers=models.TextField(max_length=50)
 
 
+class Patient(models.Model):
+    patientId = models.AutoField(primary_key=True)
+    pFirstName = models.CharField(max_length=200)
+    pLastName = models.CharField(max_length=50)
+    pContactNumber = models.CharField(max_length=12)
+    textField = models.TextField(max_length=200)
+    created_date =  models.DateTimeField(timezone.now())
+
+    def created(self):
+        self.created_date = timezone.now()
+        self.save()
+
+
+    def __str__(self):
+        return str(self.patientId)
+
+

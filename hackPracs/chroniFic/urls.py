@@ -8,8 +8,8 @@ urlpatterns = [
     url(r'^department_list',views.department_list, name='department_list'),
     url(r'^illness_list',views.illness_list, name='illness_list'),
     url(r'^about_us',views.about_us, name='about_us'),
-    url(r'^hospital_list',views.hospital_list, name='hospital_list'),
-
+    url(r'^hospital_list', views.hospital_list, name='hospital_list'),
+    url(r'^book_appointment/', views.book_appointment, name='book_appointment'),
  ]
 
 
