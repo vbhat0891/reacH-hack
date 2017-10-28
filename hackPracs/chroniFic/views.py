@@ -1,11 +1,19 @@
 from django.shortcuts import render
 
+from django.views import generic
+from django.views.generic import CreateView
+from .models import Patient
 # Create your views here.
 
 
 def home(request):
    return render(request, 'chroniFic/home.html',
                  {'chroniFic': home})
+
+
+def login(request):
+   return render(request, 'chroniFic/login.html',
+                 {'chroniFic': login})
 
 
 def customer(request):
@@ -35,3 +43,9 @@ def hospital_list(request):
 def book_appointment(request):
     return render(request, 'chroniFic/book_appointment.html',
                   {'chroniFic': book_appointment})
+
+
+def doctor_login(request):
+    return render(request, 'chroniFic/doctor_login.html',
+                  {'chroniFic': doctor_login})
+

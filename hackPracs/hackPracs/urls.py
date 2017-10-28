@@ -21,4 +21,19 @@ from django.contrib.auth import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'', include('chroniFic.urls', namespace='chroniFic')),
+    url(r'^accounts/login/$', views.login, name='login'),
+    url(r'^accounts/profile/', include('chroniFic.urls', namespace='chroniFic')),
+    url(r'^accounts/logout/$', views.logout, name='logout', kwargs={'next_page': '/'}),
+    url(r'^user/password/reset/$',
+        views.password_reset,
+        {'post_reset_redirect' : '/user/password/reset/done/'},
+        name='password_reset'),
+    url(r'^user/password/reset/done/$',
+        views.password_reset_done,  name='password_rest_done'),
+    url(r'^user/password/reset/(?P<uidb64>[0-9A-Za-z]+)-(?P<token>.+)/$',
+        views.password_reset_confirm,
+        {'post_reset_redirect' : '/user/password/done/'},  name='password_reset_confirm'),
+    url(r'^user/password/done/$',
+        views.password_reset_complete,  name='password_reset_complete'),
+
 ]

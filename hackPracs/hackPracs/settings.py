@@ -25,19 +25,29 @@ SECRET_KEY = 'jiqozkf5c84be56ycmoa-#%d$@qimq7=yxem)fas(4^gh=#!0u'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+if DEBUG:
+    EMAIL_HOST = 'smtp.gmail.com'
+    EMAIL_HOST_USER = 'chronific2017@gmail.com  '
+    EMAIL_HOST_PASSWORD = 'mavkars1'
+    EMAIL_PORT = 587
+    EMAIL_USE_TLS = True
+    DEFAULT_FROM_EMAIL = 'Team MavKars<chronific2017@gmail.com>'
+
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
+
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'chroniFic'
+    'chroniFic',
+    'django.contrib.admin',
+
 ]
 
 MIDDLEWARE = [
